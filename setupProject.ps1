@@ -1,70 +1,75 @@
 # Define the project folder and subfolders
 $projectFolder = "GameProject"
 $subfolders = @("css", "js", "images", "tests", "docs", "assets", "config")
+$ErrorActionPreference = "Stop"
 
-# Create the main project folder if it doesn't exist
-if (-Not (Test-Path -Path $projectFolder)) {
-    New-Item -ItemType Directory -Path $projectFolder
-}
-
-# Create subfolders
-foreach ($folder in $subfolders) {
-    $folderPath = "$projectFolder\$folder"
-    if (-Not (Test-Path -Path $folderPath)) {
-        New-Item -ItemType Directory -Path $folderPath
+function Write-Log {
+    param($Message, [switch]$IsError)
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    if ($IsError) {
+        Write-Error "[$timestamp] ERROR: $Message"
+    } else {
+        Write-Output "[$timestamp] INFO: $Message"
     }
 }
 
-# Move index.html to the main project folder
-if (Test-Path -Path "index.html") {
-    Move-Item -Path "index.html" -Destination "$projectFolder\index.html"
-}
+try {
+    # Create the main project folder
+    if (-Not (Test-Path -Path $projectFolder)) {
+        New-Item -ItemType Directory -Path $projectFolder
+        Write-Log "Created main project folder: $projectFolder"
+    }
 
-# Move style.css to the css subfolder
-if (Test-Path -Path "style.css") {
-    Move-Item -Path "style.css" -Destination "$projectFolder\css\style.css"
-}
+    # Create subfolders
+    foreach ($folder in $subfolders) {
+        $folderPath = Join-Path $projectFolder $folder
+        if (-Not (Test-Path -Path $folderPath)) {
+            New-Item -ItemType Directory -Path $folderPath
+            Write-Log "Created subfolder: $folder"
+        }
+    }
 
-# Create a placeholder script.js file in the js subfolder if it doesn't exist
-$scriptFilePath = "$projectFolder\js\script.js"
-if (-Not (Test-Path -Path $scriptFilePath)) {
-    New-Item -ItemType File -Path $scriptFilePath
-}
+    # Define file moves
+    $fileMoves = @{
+        "index.html" = $projectFolder
+        "style.css" = (Join-Path $projectFolder "css")
+        "documentation.md" = (Join-Path $projectFolder "docs")
+        "logo.png" = (Join-Path $projectFolder "assets")
+        "config.json" = (Join-Path $projectFolder "config")
+    }
 
-# Create a placeholder image in the images subfolder if it doesn't exist
-$imageFilePath = "$projectFolder\images\placeholder.png"
-if (-Not (Test-Path -Path $imageFilePath)) {
-    New-Item -ItemType File -Path $imageFilePath
-}
+    # Move files to their respective folders
+    foreach ($file in $fileMoves.Keys) {
+        if (Test-Path -Path $file) {
+            Move-Item -Path $file -Destination (Join-Path $fileMoves[$file] $file) -Force
+            Write-Log "Moved $file to $($fileMoves[$file])"
+        }
+    }
 
-# Create a README.md file in the main project folder if it doesn't exist
-$readmeFilePath = "$projectFolder\README.md"
-if (-Not (Test-Path -Path $readmeFilePath)) {
-    New-Item -ItemType File -Path $readmeFilePath -Value "# Project Title`n`n## Description`n`n## Installation`n`n## Usage"
-}
+    # Create placeholder files
+    $placeholders = @{
+        (Join-Path $projectFolder "js\script.js") = "// Main JavaScript file"
+        (Join-Path $projectFolder "images\placeholder.png") = ""
+        (Join-Path $projectFolder "README.md") = "# Project Title`n`n## Description`n`n## Installation`n`n## Usage"
+    }
 
-# Move .test.js files to the tests subfolder
-$testFiles = Get-ChildItem -Path . -Filter *.test.js
-foreach ($file in $testFiles) {
-    Move-Item -Path $file.FullName -Destination "$projectFolder\tests\$($file.Name)"
-}
+    foreach ($file in $placeholders.Keys) {
+        if (-Not (Test-Path -Path $file)) {
+            New-Item -ItemType File -Path $file -Value $placeholders[$file] -Force
+            Write-Log "Created placeholder file: $file"
+        }
+    }
 
-# Move documentation.md to the docs subfolder
-$documentationFilePath = "documentation.md"
-if (Test-Path -Path $documentationFilePath) {
-    Move-Item -Path $documentationFilePath -Destination "$projectFolder\docs\documentation.md"
-}
+    # Move test files
+    Get-ChildItem -Path . -Filter "*.test.js" | ForEach-Object {
+        $destination = Join-Path $projectFolder "tests\$($_.Name)"
+        Move-Item -Path $_.FullName -Destination $destination -Force
+        Write-Log "Moved test file: $($_.Name)"
+    }
 
-# Move logo.png to the assets subfolder
-$logoFilePath = "logo.png"
-if (Test-Path -Path $logoFilePath) {
-    Move-Item -Path $logoFilePath -Destination "$projectFolder\assets\logo.png"
-}
+    Write-Log "Project setup completed successfully!"
 
-# Move config.json to the config subfolder
-$configFilePath = "config.json"
-if (Test-Path -Path $configFilePath) {
-    Move-Item -Path $configFilePath -Destination "$projectFolder\config\config.json"
+} catch {
+    Write-Log $_.Exception.Message -IsError
+    exit 1
 }
-
-Write-Output "Project structure created, files moved, and test files organized successfully."

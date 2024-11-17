@@ -1,165 +1,33 @@
-2024-11-17 05:26:02.143 [info] [main] Log level: Info
-2024-11-17 05:26:02.143 [info] [main] Validating found git in: "C:\Program Files\Git\cmd\git.exe"
-2024-11-17 05:26:02.143 [info] [main] Using git "2.47.0.windows.2" from "C:\Program Files\Git\cmd\git.exe"
-2024-11-17 05:26:02.143 [info] [Model][doInitialScan] Initial repository scan started
-2024-11-17 05:26:02.143 [info] > git rev-parse --show-toplevel [1426ms]
-2024-11-17 05:26:02.146 [info] > git rev-parse --git-dir --git-common-dir [1320ms]
-2024-11-17 05:26:02.147 [info] [Model][openRepository] Opened repository: c:\Users\leann
-2024-11-17 05:26:03.598 [info] > git rev-parse --show-toplevel [1357ms]
-2024-11-17 05:26:12.574 [info] > git fetch [11018ms]
-2024-11-17 05:26:12.576 [info] > git config --get commit.template [10341ms]
-2024-11-17 05:26:12.854 [info] > git check-ignore -v -z --stdin [9794ms]
-2024-11-17 05:26:12.858 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [483ms]
-2024-11-17 05:26:13.053 [info] > git rev-parse --show-toplevel [514ms]
-2024-11-17 05:26:13.367 [info] > git config --get commit.template [530ms]
-2024-11-17 05:26:14.647 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [1295ms]
-2024-11-17 05:26:14.648 [info] > git config --get commit.template [1175ms]
-2024-11-17 05:26:14.656 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [1204ms]
-2024-11-17 05:26:14.746 [info] > git rev-parse --show-toplevel [1551ms]
-2024-11-17 05:26:16.364 [info] > git rev-parse --show-toplevel [1414ms]
-2024-11-17 05:26:16.365 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [1422ms]
-2024-11-17 05:26:16.365 [info] > git config --local branch.main.vscode-merge-base [1694ms]
-2024-11-17 05:26:16.366 [warning] [Git][config] git config failed: Failed to execute git
-2024-11-17 05:26:16.674 [info] > git reflog main --grep-reflog=branch: Created from *. [296ms]
-2024-11-17 05:26:16.746 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [344ms]
-2024-11-17 05:26:16.793 [info] > git rev-parse --git-dir --git-common-dir [306ms]
-2024-11-17 05:26:16.936 [info] [Model][openRepository] Opened repository: c:\Users\leann\Documents\Bluntwrapz
-2024-11-17 05:26:17.047 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [385ms]
-2024-11-17 05:26:17.132 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:26:17.153 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [472ms]
-2024-11-17 05:26:17.153 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
-2024-11-17 05:26:17.153 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
-2024-11-17 05:26:17.202 [info] > git config --local branch.main.vscode-merge-base [449ms]
-2024-11-17 05:26:17.202 [warning] [Git][config] git config failed: Failed to execute git
-2024-11-17 05:26:18.458 [info] > git merge-base refs/heads/main refs/remotes/BRANCH1/main [1296ms]
-2024-11-17 05:26:18.469 [info] > git reflog main --grep-reflog=branch: Created from *. [1247ms]
-2024-11-17 05:26:18.487 [info] > git fetch [1552ms]
-2024-11-17 05:26:18.488 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [1336ms]
-2024-11-17 05:26:18.488 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:26:18.488 [info] > git rev-parse --show-toplevel [1472ms]
-2024-11-17 05:26:18.489 [info] > git config --get commit.template [1480ms]
-2024-11-17 05:26:18.757 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:26:18.765 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:26:18.794 [info] > git check-ignore -v -z --stdin [1242ms]
-2024-11-17 05:26:19.132 [info] > git check-ignore -v -z --stdin [1573ms]
-2024-11-17 05:26:19.341 [info] > git diff --name-status -z --diff-filter=ADMR 7427cc56fbf4012468dd49a73fdc9d4f87d21f45...refs/remotes/BRANCH1/main [872ms]
-2024-11-17 05:26:19.383 [info] > git config --get commit.template [748ms]
-2024-11-17 05:26:19.383 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [886ms]
-2024-11-17 05:26:19.383 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:26:19.384 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for master: Error: No such branch: master.
-2024-11-17 05:26:19.385 [info] > git rev-parse --show-toplevel [745ms]
-2024-11-17 05:26:19.387 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [912ms]
-2024-11-17 05:26:19.387 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
-2024-11-17 05:26:19.387 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
-2024-11-17 05:26:19.421 [info] > git config --get commit.template [773ms]
-2024-11-17 05:26:19.421 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [664ms]
-2024-11-17 05:26:19.421 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:26:20.167 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [1401ms]
-2024-11-17 05:26:20.167 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:26:20.180 [info] > git rev-parse --show-toplevel [760ms]
-2024-11-17 05:26:20.597 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [418ms]
-2024-11-17 05:26:20.640 [info] > git status -z -uall --ignore-submodules [467ms]
-2024-11-17 05:26:20.656 [info] > git rev-parse --show-toplevel [445ms]
-2024-11-17 05:26:21.197 [info] > git rev-parse --show-toplevel [530ms]
-2024-11-17 05:26:21.452 [info] > git rev-parse --show-toplevel [246ms]
-2024-11-17 05:26:21.644 [info] > git rev-parse --show-toplevel [185ms]
-2024-11-17 05:26:21.887 [info] > git rev-parse --show-toplevel [237ms]
-2024-11-17 05:26:22.135 [info] > git rev-parse --show-toplevel [242ms]
-2024-11-17 05:26:22.372 [info] > git rev-parse --show-toplevel [231ms]
-2024-11-17 05:26:22.593 [info] > git rev-parse --show-toplevel [215ms]
-2024-11-17 05:26:22.598 [info] [Model][doInitialScan] Initial repository scan completed - repositories (2), closed repositories (0), parent repositories (0), unsafe repositories (0)
-2024-11-17 05:26:38.618 [info] > git status -z -uall --ignore-submodules [21962ms] (cancelled)
-2024-11-17 05:27:48.433 [info] > git ls-files --stage -- C:\Users\leann\Documents\Bluntwrapz\Bluntwrapz.dotnet.code-workspace [294ms]
-2024-11-17 05:27:48.450 [info] > git show --textconv :Bluntwrapz.dotnet.code-workspace [319ms]
-2024-11-17 05:27:48.535 [info] > git check-ignore -v -z --stdin [129ms]
-2024-11-17 05:27:48.986 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:27:49.087 [info] > git config --get commit.template [102ms]
-2024-11-17 05:27:49.095 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [104ms]
-2024-11-17 05:27:49.095 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:27:49.204 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [97ms]
-2024-11-17 05:27:49.208 [info] > git status -z -uall --ignore-submodules [108ms]
-2024-11-17 05:29:04.556 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:29:04.653 [info] > git config --get commit.template [97ms]
-2024-11-17 05:29:04.660 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [97ms]
-2024-11-17 05:29:04.660 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:29:04.772 [info] > git status -z -uall --ignore-submodules [106ms]
-2024-11-17 05:29:04.777 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [105ms]
-2024-11-17 05:29:21.967 [info] [main] Log level: Info
-2024-11-17 05:29:21.967 [info] [main] Validating found git in: "C:\Program Files\Git\cmd\git.exe"
-2024-11-17 05:29:21.967 [info] [main] Using git "2.47.0.windows.2" from "C:\Program Files\Git\cmd\git.exe"
-2024-11-17 05:29:21.967 [info] [Model][doInitialScan] Initial repository scan started
-2024-11-17 05:29:21.984 [info] > git rev-parse --show-toplevel [289ms]
-2024-11-17 05:29:23.940 [info] > git rev-parse --git-dir --git-common-dir [1947ms]
-2024-11-17 05:29:23.976 [info] [Model][openRepository] Opened repository: c:\Users\leann\Documents\Bluntwrapz
-2024-11-17 05:29:24.953 [info] > git fetch [977ms]
-2024-11-17 05:29:25.442 [info] > git rev-parse --show-toplevel [505ms]
-2024-11-17 05:29:25.446 [info] > git config --get commit.template [517ms]
-2024-11-17 05:29:25.824 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:29:25.834 [info] > git rev-parse --show-toplevel [247ms]
-2024-11-17 05:29:25.838 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
-2024-11-17 05:29:25.855 [info] > git config --get commit.template [461ms]
-2024-11-17 05:29:25.918 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:29:25.921 [info] > git check-ignore -v -z --stdin [404ms]
-2024-11-17 05:29:26.007 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [183ms]
-2024-11-17 05:29:26.007 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:29:26.232 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [314ms]
-2024-11-17 05:29:26.233 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:29:26.580 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [297ms]
-2024-11-17 05:29:26.581 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:29:26.582 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for master: Error: No such branch: master.
-2024-11-17 05:29:26.583 [info] > git config --get commit.template [440ms]
-2024-11-17 05:29:26.586 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [480ms]
-2024-11-17 05:29:26.586 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:29:26.587 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for master: Error: No such branch: master.
-2024-11-17 05:29:28.058 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:29:29.368 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [1311ms]
-2024-11-17 05:29:29.368 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:29:29.809 [info] > git status -z -uall --ignore-submodules [417ms]
-2024-11-17 05:29:31.135 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1728ms]
-2024-11-17 05:46:22.308 [info] > git fetch [198ms]
-2024-11-17 05:46:22.325 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:46:22.423 [info] > git config --get commit.template [107ms]
-2024-11-17 05:46:22.430 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [108ms]
-2024-11-17 05:46:22.430 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:46:22.534 [info] > git status -z -uall --ignore-submodules [100ms]
-2024-11-17 05:46:22.542 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [101ms]
-2024-11-17 05:46:41.760 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:46:41.889 [info] > git config --get commit.template [134ms]
-2024-11-17 05:46:41.890 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [130ms]
-2024-11-17 05:46:41.890 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:46:42.074 [info] > git status -z -uall --ignore-submodules [179ms]
-2024-11-17 05:46:42.079 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [178ms]
-2024-11-17 05:46:48.599 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:46:48.682 [info] > git config --get commit.template [88ms]
-2024-11-17 05:46:48.689 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [89ms]
-2024-11-17 05:46:48.689 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:46:48.785 [info] > git status -z -uall --ignore-submodules [91ms]
-2024-11-17 05:46:48.791 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [91ms]
-2024-11-17 05:47:07.945 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:47:08.048 [info] > git config --get commit.template [104ms]
-2024-11-17 05:47:08.059 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [108ms]
-2024-11-17 05:47:08.059 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:47:08.186 [info] > git status -z -uall --ignore-submodules [120ms]
-2024-11-17 05:47:08.192 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [120ms]
-2024-11-17 05:47:15.067 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:47:15.160 [info] > git config --get commit.template [93ms]
-2024-11-17 05:47:15.175 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [104ms]
-2024-11-17 05:47:15.176 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:47:15.284 [info] > git status -z -uall --ignore-submodules [103ms]
-2024-11-17 05:47:15.291 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [103ms]
-2024-11-17 05:49:04.220 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [616ms]
-2024-11-17 05:49:21.495 [info] > git checkout -q -b Branch-Bluntwrapz --no-track HEAD [85ms]
-2024-11-17 05:49:21.495 [info] fatal: 'HEAD' is not a commit and a branch 'Branch-Bluntwrapz' cannot be created from it
-2024-11-17 05:49:21.501 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:49:21.587 [info] > git config --get commit.template [86ms]
-2024-11-17 05:49:21.594 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [88ms]
-2024-11-17 05:49:21.594 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:49:21.689 [info] > git status -z -uall --ignore-submodules [91ms]
-2024-11-17 05:49:21.693 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [89ms]
-2024-11-17 05:49:28.595 [info] > git fetch [188ms]
-2024-11-17 05:49:28.610 [info] [Git][getRemotes] No remotes found in the git config file
-2024-11-17 05:49:28.772 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [162ms]
-2024-11-17 05:49:28.773 [warning] [Git][getBranch] No such branch: master
-2024-11-17 05:49:28.773 [info] > git config --get commit.template [171ms]
-2024-11-17 05:49:28.975 [info] > git status -z -uall --ignore-submodules [193ms]
-2024-11-17 05:49:28.981 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [193ms]
+2024-11-17 05:46:48.682 [INFO] Command executed: git config --get commit.template [88ms]
+2024-11-17 05:46:48.689 [INFO] Command executed: git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [89ms]
+2024-11-17 05:46:48.689 [WARNING] [Git][getBranch] No such branch: master
+2024-11-17 05:46:48.785 [INFO] Command executed: git status -z -uall --ignore-submodules [91ms]
+2024-11-17 05:46:48.791 [INFO] Command executed: git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [91ms]
+2024-11-17 05:47:07.945 [INFO] [Git][getRemotes] No remotes found in the git config file
+2024-11-17 05:47:08.048 [INFO] Command executed: git config --get commit.template [104ms]
+2024-11-17 05:47:08.059 [INFO] Command executed: git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [108ms]
+2024-11-17 05:47:08.059 [WARNING] [Git][getBranch] No such branch: master
+2024-11-17 05:47:08.186 [INFO] Command executed: git status -z -uall --ignore-submodules [120ms]
+2024-11-17 05:47:08.192 [INFO] Command executed: git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [120ms]
+2024-11-17 05:47:15.067 [INFO] [Git][getRemotes] No remotes found in the git config file
+2024-11-17 05:47:15.160 [INFO] Command executed: git config --get commit.template [93ms]
+2024-11-17 05:47:15.175 [INFO] Command executed: git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [104ms]
+2024-11-17 05:47:15.176 [WARNING] [Git][getBranch] No such branch: master
+2024-11-17 05:47:15.284 [INFO] Command executed: git status -z -uall --ignore-submodules [103ms]
+2024-11-17 05:47:15.291 [INFO] Command executed: git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [103ms]
+2024-11-17 05:49:04.220 [INFO] Command executed: git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [616ms]
+2024-11-17 05:49:21.495 [INFO] Command executed: git checkout -q -b Branch-Bluntwrapz --no-track HEAD [85ms]
+2024-11-17 05:49:21.495 [ERROR] Command failed: fatal: 'HEAD' is not a commit and a branch 'Branch-Bluntwrapz' cannot be created from it
+2024-11-17 05:49:21.501 [INFO] [Git][getRemotes] No remotes found in the git config file
+2024-11-17 05:49:21.587 [INFO] Command executed: git config --get commit.template [86ms]
+2024-11-17 05:49:21.594 [INFO] Command executed: git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [88ms]
+2024-11-17 05:49:21.594 [WARNING] [Git][getBranch] No such branch: master
+2024-11-17 05:49:21.689 [INFO] Command executed: git status -z -uall --ignore-submodules [91ms]
+2024-11-17 05:49:21.693 [INFO] Command executed: git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [89ms]
+2024-11-17 05:49:28.595 [INFO] Command executed: git fetch [188ms]
+2024-11-17 05:49:28.610 [INFO] [Git][getRemotes] No remotes found in the git config file
+2024-11-17 05:49:28.772 [INFO] Command executed: git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/master refs/remotes/master [162ms]
+2024-11-17 05:49:28.773 [WARNING] [Git][getBranch] No such branch: master
+2024-11-17 05:49:28.773 [INFO] Command executed: git config --get commit.template [171ms]
+2024-11-17 05:49:28.975 [INFO] Command executed: git status -z -uall --ignore-submodules [193ms]
+2024-11-17 05:49:28.981 [INFO] Command executed: git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [193ms]

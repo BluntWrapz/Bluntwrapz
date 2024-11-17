@@ -16,10 +16,16 @@
     "window.confirmSaveUntitledWorkspace": false,
     "dotnet.defaultSolution": "Bluntwrapz.sln",
     "dotnet.sdkVersion": "8.1.0",
-    "dotnet.enableRoslynAnalyzers": true, // Example additional setting
+    "dotnet.enableRoslynAnalyzers": true,
     "dotnet.formatOnSave": true,
     "search.useGlobalIgnoreFiles": true,
-    "search.useParentIgnoreFiles": true, // Example additional setting
+    "search.useParentIgnoreFiles": true,
+    "testing.openTesting": "neverOpen",
+    "jest.outputConfig": {
+      "revealOn": "run",
+      "revealWithFocus": "none",
+      "clearOnRun": "none",
+    },
   },
   "extensions": {
     "recommendations": [
@@ -28,7 +34,9 @@
       "orta.vscode-jest",
       "ms-dotnettools.csharp",
       "ms-dotnettools.vscode-dotnet-runtime",
-      "ms-vscode.vscode-typescript-next", // Example additional extension
+      "formulahendry.dotnet-test-explorer",
+      "streetsidesoftware.code-spell-checker",
+      "editorconfig.editorconfig",
     ],
   },
 }
